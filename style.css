@@ -279,3 +279,13 @@ iframe[title="fb:share_button Facebook Social Plugin"] {
     line-height: 27px; 
     font-weight: 700;
   }
+
+  .twitter-share, .facebook-share {
+    background: #fff;
+    color: #57cff4;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 2em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
