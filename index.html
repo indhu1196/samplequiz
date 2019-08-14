@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>The Federal Quiz</title> -->
+    <title>Your Website Title</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quizapp">
+        <div id="quiz_cover" class="clearfixsol">
+            <header>
+                <div class="header">
+                    <p>FEDERAL QUIZ</p>
+                    <span>cinema</span>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col col1">
+                    <h1 class="quiz_headline"></h1>
+                    <img class="quiz_leadimg" src="" alt="">
+                </div>
+                <div class="col col2 makerelative">
+                    <div class="verticalalignment">
+                        <p class="quiz_description"></p>
+                        
+                    </div> 
+                    <div class="pulltobottom">
+                        <button class="startBtn">
+                            <img src="startbtn.png" alt="">
+                        </button>   
+                        <div class="sharebuttons">
+                            <p>SHARE<br>IT ON</p>
+                            <a href="facebook"><img src="facebook.png" alt=""></a>
+                                <a href="facebook"><img src="twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <!--quiz_cover-->
+        <div id="questionslide" class="clearfixsol hidden">
+            <header class="quiz_headline"> </header>
+            <div id="quiz_content">
+
+            </div>
+            <div class="progressinfo">
+                <div class='row clearfixsol footer'>
+                    <p id="quizstatus" class='pull-left width50'></p>
+                    <button onclick='gotoNextQuestion()' class='pull-right width50 next fade-in' disabled='disabled' id='choiceSubmit'>Next &raquo;</button>
+                </div>
+                <div class="progressbar">
+                    <div class="progressbarfull"></div>
+                </div>
+            </div>
+        </div> <!--questionslide-->
+        <div id="quiz_endcover" class="clearfixsol hidden">
+
+                <h2 class="quiz_headline"> </h2>
+                <div class='quizcounter2'><p id="score"></p> <p id="scoredesc">your<br>score</p><p id="noofquestions"></p></div>
+                <!-- <div class='quizcounter'><p>Your <br> Score</p> <p id="scorecounter"></p> </div> -->
+                <p class="quiz_description"></p>
+                <div class="row clearfixsol">
+                    <div class="pull-left width50">
+                        <button class="retakeBtn"><img src="restart.png" alt=""></button>
+                    </div>
+                    <div class="pull-right width50">
+                        <div class="sharebuttons">
+                            <p>SHARE<br>IT ON</p>
+                            <div id="fb-root"></div>
+                            <div class="fb-share-button" 
+                                data-href="https://www.your-domain.com/your-page.html" 
+                                data-layout="button_count">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div> <!--quiz_endcover-->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="data.js"></script>
+    <script src="functions.js"></script>
+    <script type='text/javascript'>
+
+        var pos = 0, quiz, quiz_title, quiz_desc, quiz_status, question, description, leadVisual, choiceA, choiceB, choiceC, choiceD, reference, score = 0;
+        jQuery(".quiz_headline").text(quiz_title);
+        jQuery(".quiz_description").text(quiz_desc);
+        jQuery(".quiz_leadimg").attr("src", quiz_image);
+
+        
+
+        jQuery("#quiz_cover .startBtn").on("click", function(e){
+            jQuery("#quiz_cover").addClass("hidden")
+            jQuery("#questionslide").removeClass("hidden")
+            createAQuestion();
+        })
+        
+        jQuery("#quiz_endcover .retakeBtn").on("click", function(e){
+            pos = 0;
+            score = 0;
+            jQuery("#quiz_endcover").addClass("hidden")
+            jQuery("#questionslide").removeClass("hidden")
+            createAQuestion();
+        })
+        
+    </script>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+  
+</head>
+<body>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  
+  
+
+  <!-- Your share button code -->
+  
+
+</body>
+</html>
